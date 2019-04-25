@@ -1,6 +1,6 @@
 import { PrivateService } from '@makerdao/services-core';
 import { OtcBuyOrder, OtcSellOrder } from './OtcOrder';
-import { getCurrency, DAI, WETH } from '../../eth/Currency';
+import { getCurrency, DAI, WETH } from './Currency';
 
 export default class MakerOtcService extends PrivateService {
   constructor(name = 'exchange') {

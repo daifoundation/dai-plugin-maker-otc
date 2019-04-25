@@ -1,0 +1,18 @@
+dist: trusty
+sudo: required
+language: node_js
+node_js:
+- '11.10'
+before_cache:
+- nix-collect-garbage -d
+- rm -rf node_modules/secp256k1/build
+cache:
+  npm: true
+  timeout: 9000
+before_install:
+- npm i -g npm@latest yarn
+install:
+- yarn
+before_script:
+script:
+- yarn test -s default -u
