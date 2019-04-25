@@ -1,0 +1,41 @@
+{
+  "name": "dai-plugin-maker-otc",
+  "version": "0.1.0",
+  "description": "A dai.js plugin for interacting with the maker OTC contract",
+  "main": "dist/src/index.js",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/runtime": "^7.4.3",
+    "@makerdao/dai": "^0.15.1-kovan.2",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.7.1",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "ethers": "^3.0.15",
+    "jest": "^24.7.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.17.0"
+  },
+  "dependencies": {
+    "@makerdao/currency": "^0.9.3",
+    "@makerdao/services-core": "^0.9.5",
+    "lodash.values": "^4.3.0"
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "prettier --write --single-quote",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "build": "./scripts/build.sh",
+    "test": "./scripts/build.sh && ./scripts/run-testchain.sh -s default -u --ci jest --runInBand --config ./test/config/jestDefaultConfig.json",
+    "test:net": "./scripts/run-testchain.sh -s default -u",
+    "precommit": "lint-staged"
+  },
+  "license": "MIT"
+}
