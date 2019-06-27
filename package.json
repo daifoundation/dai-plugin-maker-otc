@@ -1,6 +1,6 @@
 {
   "name": "dai-plugin-maker-otc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A dai.js plugin for interacting with the maker OTC contract",
   "main": "dist/src/index.js",
   "devDependencies": {
@@ -10,7 +10,7 @@
     "@babel/plugin-transform-runtime": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "@babel/runtime": "^7.4.3",
-    "@makerdao/dai": "^0.15.1-kovan.2",
+    "@makerdao/dai": "^0.16.2",
     "assert": "^1.4.1",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.7.1",
@@ -23,8 +23,8 @@
     "prettier": "^1.17.0"
   },
   "dependencies": {
-    "@makerdao/currency": "^0.9.3",
-    "@makerdao/services-core": "^0.9.5",
+    "@makerdao/currency": "^0.9.5",
+    "@makerdao/services-core": "^0.9.8",
     "lodash.values": "^4.3.0"
   },
   "lint-staged": {

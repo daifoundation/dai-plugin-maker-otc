@@ -9,7 +9,10 @@ before_cache:
 cache:
   npm: true
   timeout: 9000
+git:
+  submodules: false
 before_install:
+- git submodule update --init
 - npm i -g npm@latest yarn
 install:
 - yarn
