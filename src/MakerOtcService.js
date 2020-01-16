@@ -1,6 +1,7 @@
 import { PrivateService } from '@makerdao/services-core';
 import { OtcBuyOrder, OtcSellOrder } from './OtcOrder';
 import { getCurrency, DAI, WETH } from './Currency';
+import { MDAI } from '@makerdao/dai-plugin-mcd';
 
 export default class MakerOtcService extends PrivateService {
   constructor(name = 'exchange') {
@@ -25,12 +26,12 @@ export default class MakerOtcService extends PrivateService {
     const otcContract = this.get('smartContract').getContractByName(
       'MAKER_OTC'
     );
-    const daiToken = this.get('token').getToken(DAI);
+    const daiToken = this.get('token').getToken(MDAI);
     const daiAddress = daiToken.address();
     const buyToken = this.get('token').getToken(currency);
     const daiAmountEVM = daiValueForContract(amount);
     const minFillAmountEVM = daiValueForContract(minFillAmount);
-    await this.get('allowance').requireAllowance(DAI, otcContract.address);
+    await this.get('allowance').requireAllowance(MDAI, otcContract.address);
     return OtcSellOrder.build(
       otcContract,
       'sellAllAmount',
@@ -49,7 +50,7 @@ export default class MakerOtcService extends PrivateService {
     const otcContract = this.get('smartContract').getContractByName(
       'MAKER_OTC'
     );
-    const daiToken = this.get('token').getToken(DAI);
+    const daiToken = this.get('token').getToken(MDAI);
     const daiAddress = daiToken.address();
     const daiAmountEVM = daiValueForContract(amount);
     const maxFillAmountEVM = daiValueForContract(maxFillAmount);
