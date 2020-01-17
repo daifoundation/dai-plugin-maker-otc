@@ -37,7 +37,7 @@
   "scripts": {
     "build": "./scripts/build.sh",
     "test": "./scripts/build.sh && ./scripts/run-testchain.sh -s default -u --ci jest --runInBand --config ./test/config/jestDefaultConfig.json",
-    "test:net": "./scripts/run-testchain.sh -s default -u",
+    "testchain": "./scripts/run-testchain.sh -s default -u",
     "precommit": "lint-staged"
   },
   "license": "MIT"
