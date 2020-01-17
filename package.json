@@ -1,6 +1,6 @@
 {
-  "name": "dai-plugin-maker-otc",
-  "version": "0.1.1",
+  "name": "@makerdao/dai-plugin-maker-otc",
+  "version": "0.1.2",
   "description": "A dai.js plugin for interacting with the maker OTC contract",
   "main": "dist/src/index.js",
   "devDependencies": {
