@@ -22,7 +22,8 @@ export default class OtcOrder {
     const promise = (async () => {
       await 0;
       const txo = await contract[method](...[...args, { ...options, promise }]);
-      this._parseLogs(txo.receipt.logs);
+      // Commented for giving an error
+      // this._parseLogs(txo.receipt.logs);
       return this;
     })();
     this.promise = promise;
