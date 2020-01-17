@@ -11,6 +11,7 @@
     "@babel/preset-env": "^7.4.3",
     "@babel/runtime": "^7.4.3",
     "@makerdao/dai": "^0.16.2",
+    "@makerdao/testchain": "^1.0.5",
     "assert": "^1.4.1",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.7.1",
